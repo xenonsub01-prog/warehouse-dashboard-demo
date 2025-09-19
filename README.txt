@@ -1,21 +1,14 @@
-Warehouse Demo — Owner bypass + Short links (Port 8502)
 
-Buttons
--------
-- run_owner_local.bat   -> runs the app on http://localhost:8502 as OWNER (?admin=OWNER_KEY)
-- run_owner_cloud.bat   -> opens your Streamlit Cloud URL as OWNER (reads CLOUD_URL or BASE_URL from .env)
-- run_app.bat           -> normal run (local)
+Warehouse Dashboard Demo (Clean Build)
+- Owner access only (open with ?admin=admin12345)
+- Dashboards by warehouse with KPIs and update form
+- Port 8502 for local runs
 
-Env (.env)
-----------
-DEMO_SECRET=<auto/random>
-OWNER_KEY=<auto/random or set your own>
-BASE_URL=http://localhost:8502/
-CLOUD_URL=https://your-app.streamlit.app/
+Quick start (local)
+1) Double-click setup.bat (first time only)
+2) Double-click run_owner_local.bat
+3) Browser opens: http://localhost:8502/?admin=admin12345
 
-Steps
------
-1) Double-click setup.bat
-2) Double-click run_owner_local.bat  (Owner mode, local)
-3) Or set CLOUD_URL then double-click run_owner_cloud.bat  (Owner mode, cloud)
-4) Generate client Short URL from Admin Panel (visible only to Owner)
+Deploy on Streamlit Cloud
+- Repository main file: app.py
+- Add secret OWNER_KEY=admin12345 (optional; demo uses default)
